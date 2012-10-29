@@ -13,8 +13,6 @@ public class EquationsCreator {
 	private EquationsCalculator calculator;
 	private PrintStream out;
 	
-	int count = 1;
-
 	public EquationsCreator(EquationsValidator validator, EquationsCalculator calculator, PrintStream out) {
 		this.validator = validator;
 		this.calculator = calculator;
@@ -25,7 +23,7 @@ public class EquationsCreator {
 		StringBuilder builder = createSequence(operatorPlaces);
 
 		if (validator.isSyntacticallyCorrect(builder.toString())) {
-			out.print(count++ + " Trying equation: " + builder.toString() +" = 100");
+			out.print(" Trying equation: " + builder.toString() +" = 100");
 			if (calculator.isCorrect(builder.toString())) {
 				out.println(" and it is correct!");
 			} else {

@@ -23,7 +23,7 @@ public class EquationsCreator {
 		StringBuilder builder = createSequence(operatorPlaces);
 
 		if (validator.isSyntacticallyCorrect(builder.toString())) {
-			out.print(" Trying equation: " + builder.toString() +" = 100");
+			out.print("Trying equation: " + builder.toString() +" = 100");
 			if (calculator.isCorrect(builder.toString())) {
 				out.println(" and it is correct!");
 			} else {
